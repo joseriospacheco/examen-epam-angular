@@ -1,0 +1,53 @@
+{
+  "clients": [
+    {
+      "id": "1108",
+      "name": "jrios",
+      "firstName": "Jose",
+      "lastName": "Rios",
+      "phone": "3016879718",
+      "email": "jose_rios@epam.com"
+    },
+    {
+      "id": "1109",
+      "name": "mbravo",
+      "firstName": "Marco",
+      "lastName": "Bravo",
+      "phone": "3205204398",
+      "email": "marco_bravo@epam.com"
+    },
+    {
+      "id": "J-ijyv3UdIY",
+      "name": "jperez",
+      "firstName": "Jose",
+      "lastName": "Perez",
+      "phone": "3232323",
+      "email": "joasa@corr.com"
+    },
+    {
+      "id": "pyDArBeLjl4",
+      "name": "Jose Rios",
+      "firstName": "xzx",
+      "lastName": "xzx",
+      "phone": "32323232",
+      "email": "joseriospacheco@gmail.com"
+    },
+    {
+      "id": "WicVDcmpqfE",
+      "name": "anana",
+      "firstName": "Ana",
+      "lastName": "Perez",
+      "phone": "323232",
+      "email": "anaprez@ocewco.com"
+    },
+    {
+      "id": "r-B-TYUPOzA",
+      "name": "juan",
+      "firstName": "prez",
+      "lastName": "CZ",
+      "phone": "4343",
+      "email": "anaprez@ocewco.com"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

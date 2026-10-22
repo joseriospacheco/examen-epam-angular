@@ -1,0 +1,97 @@
+<div class="container  pt-3  gap-3">
+  <form #clientForm="ngForm" ngNativeValidate (ngSubmit)="onSubmit(clientForm)" class="gap-3">
+    <div class="row g-3">
+
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name" required minlength="4">
+
+
+      </div>
+
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="firstName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="lastName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" class="form-control" id="phone" name="number" [(ngModel)]="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" required>
+      </div>
+
+
+      {{error}}
+
+
+      <div class="col-4">
+        <button type="submit" class="btn btn-primary" click="onSave()"> Save</button>
+      </div>
+
+      @if (cargando) {
+
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only"></span>
+      </div>
+
+      }
+
+
+    </div>
+  </form>
+</div>
+<div class="container pt-3">
+
+  <div class="row">
+
+
+    <input type="text" class="form-control" placeholder="Search by name" [(ngModel)]="searchTerm"
+      (input)="filterClients()">
+
+
+
+
+
+  </div>
+
+
+</div>
+
+
+<div class="container pt-3">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clients">
+        <td>{{ client.id }}</td>
+        <td>{{ client.name }}</td>
+        <td>{{ client.firstName }}</td>
+        <td>{{ client.lastName }}</td>
+        <td>{{ client.phone }}</td>
+        <td>{{ client.email }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteClient(client.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
